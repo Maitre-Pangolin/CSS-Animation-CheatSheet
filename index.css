@@ -1,0 +1,210 @@
+html {
+  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Mono", monospace;
+}
+body {
+  background: #eef6f7;
+}
+
+code {
+  font-family: "Space Mono", monospace;
+  font-size: 14px;
+}
+
+header {
+  color: #e0fbfc;
+  background-color: #293241;
+  padding: 2rem;
+  text-align: center;
+  transition-property: background-color;
+  transition-duration: 1s;
+  transition-timing-function: ease;
+  margin: auto;
+}
+
+header div {
+  width: max-content;
+  margin: auto;
+  overflow: hidden;
+}
+
+header h1 {
+  margin: auto;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+header:hover {
+  background-color: #3d5a80;
+}
+
+main {
+  max-width: 100ch;
+  margin: auto;
+}
+
+h2 {
+  color: #293241;
+}
+
+em {
+  color: #ee6c4d;
+}
+
+.animationtable div {
+  width: 20px;
+  height: 20px;
+  background: #ee6c4d;
+  position: relative;
+}
+
+#tableduration tr:nth-child(2) div {
+  animation: animateexample 1s linear infinite;
+}
+#tableduration tr:nth-child(3) div {
+  animation: animateexample 2s linear infinite;
+}
+
+#tabletiming tr:nth-child(2) div {
+  animation: animateexample 1s linear alternate infinite;
+}
+
+#tabletiming tr:nth-child(3) div {
+  animation: animateexample 1s ease alternate infinite;
+}
+
+#tabletiming tr:nth-child(4) div {
+  animation: animateexample 1s ease-in alternate infinite;
+}
+
+#tabletiming tr:nth-child(5) div {
+  animation: animateexample 1s ease-out alternate infinite;
+}
+#tabletiming tr:nth-child(6) div {
+  animation: animateexample 1s ease-in-out alternate infinite;
+}
+
+#tabledelay tr:nth-child(2) div {
+  animation: animateexample 1s 0s linear alternate infinite;
+}
+
+#tabledelay tr:nth-child(3) div {
+  animation: animateexample 1s 0.5s linear alternate infinite;
+}
+
+#tabledirection tr:nth-child(2) div {
+  animation: animateexample 1s ease normal infinite;
+}
+
+#tabledirection tr:nth-child(3) div {
+  animation: animateexample 1s ease reverse infinite;
+}
+
+#tabledirection tr:nth-child(4) div {
+  animation: animateexample 1s ease alternate infinite;
+}
+
+#tabledirection tr:nth-child(5) div {
+  animation: animateexample 1s ease alternate-reverse infinite;
+}
+
+@keyframes animateexample {
+  from {
+    left: 0%;
+  }
+  to {
+    left: 90%;
+  }
+}
+
+table {
+  border-collapse: collapse;
+  border: 1px solid #293241;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+  position: relative;
+}
+
+.codeblock,
+.codeblockanimate {
+  background-color: #293241;
+  color: #e0fbfc;
+  display: block;
+  width: auto;
+  border-radius: 10px;
+}
+
+.codeblockanimate {
+  animation: code 2s alternate infinite;
+}
+
+@keyframes code {
+  from {
+    background-color: #293241;
+  }
+  50% {
+    color: #ee6c4d;
+  }
+  to {
+    background-color: #3d5a80;
+    color: #ee6c4d;
+  }
+}
+
+span {
+  width: 100%;
+  height: 2px;
+  left: 100%;
+  background: linear-gradient(90deg, transparent, #e0fbfc);
+  display: block;
+  position: relative;
+  animation: headeranimation 2s ease infinite;
+}
+
+span:nth-child(1) {
+  background: linear-gradient(90deg, #e0fbfc, transparent);
+  animation: headeranimation2 2s 1s ease infinite;
+}
+
+@keyframes headeranimation {
+  from {
+    left: -100%;
+  }
+  50%,
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes headeranimation2 {
+  from {
+    left: 100%;
+  }
+  50%,
+  to {
+    left: -100%;
+  }
+}
+
+td,
+th {
+  padding: 10px 20px;
+}
+
+th {
+  background-color: #98c1d9;
+}
+
+td {
+  text-align: center;
+}
+
+.animationtable td:nth-child(1) {
+  width: 200px;
+}
+
+.animationtable td:nth-child(2) {
+  width: 200px;
+}

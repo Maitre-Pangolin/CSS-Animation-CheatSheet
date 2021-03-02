@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Animation CheatSheet</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&family=Space+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+  <body>
+    <header>
+      <div>
+        <span class="line-effect"></span>
+        <h1>Codecademy CheatSheet - CSS Animation</h1>
+        <span class="line-effect"></span>
+      </div>
+    </header>
+    <main>
+      <section>
+        <h2>@keyframes</h2>
+        <p>The <em>@keyframes</em> rule specifies the animation code.</p>
+        <p>
+          The animation is created by gradually changing from one set of CSS
+          styles to another.
+        </p>
+        <p>
+          During the animation, you can change the set of CSS styles many times.
+        </p>
+        <p>
+          Specify when the style change will happen in percent, or with the
+          keywords "from" and "to", which is the same as 0% and 100%. 0% is the
+          beginning of the animation, 100% is when the animation is complete.
+        </p>
+
+        <h3>Syntax</h3>
+        <div class="codeblock">
+          <pre>
+          <code>
+    @keyframes animation_name {
+    from (or 0%) {css-style} 
+    XX% {css-style} (additionals % optional) 
+    to (or 100%) {css-style} }</code>
+        </pre>
+        </div>
+        <h3>Example</h3>
+        <div class="codeblockanimate">
+          <pre>
+          <code>
+    @keyframes code {
+        from {background-color: black;}
+
+        50% {color: hotpink;}
+
+        to {background-color: navy;
+            color: hotpink;}
+    }</code>
+        </pre>
+        </div>
+      </section>
+      <h2>Animatable Properties</h2>
+      <a
+        href="https://www.w3schools.com/cssref/css_animatable.asp"
+        target="_blank"
+        >List of animatable properties from w3schools</a
+      >
+
+      <h2>Animation Properties</h2>
+      <div class="codeblock">
+        <pre>
+        <code>
+    animation: name duration timing-function delay iteration-count direction fill-mode play-state;</code>
+      </pre>
+      </div>
+      <h3>animation-duration</h3>
+      <p>
+        The <em>animation-duration</em> property defines how long an animation
+        should take to complete one cycle.
+      </p>
+      <table class="animationtable" id="tableduration">
+        <tr>
+          <th>Duration</th>
+          <th>Animation</th>
+        </tr>
+        <tr>
+          <td>1s</td>
+          <td><div></div></td>
+        </tr>
+        <tr>
+          <td>2s</td>
+          <td><div></div></td>
+        </tr>
+      </table>
+
+      <h3>animation-timing-function</h3>
+      <p>
+        The <em>animation-timing-function</em> specifies the speed curve of an
+        animation.
+      </p>
+      <table class="animationtable" id="tabletiming">
+        <tr>
+          <th>Timing function</th>
+          <th>Animation</th>
+        </tr>
+        <tr>
+          <td>linear</td>
+          <td><div></div></td>
+        </tr>
+        <tr>
+          <td>ease</td>
+          <td><div></div></td>
+        </tr>
+        <tr>
+          <td>ease-in</td>
+          <td><div></div></td>
+        </tr>
+        <tr>
+          <td>ease-out</td>
+          <td><div></div></td>
+        </tr>
+        <tr>
+          <td>ease-in-out</td>
+          <td><div></div></td>
+        </tr>
+      </table>
+
+      <h3>animation-delay</h3>
+      <p>
+        The <em>animation-delay</em> property specifies a delay for the start of
+        an animation.
+      </p>
+      <table class="animationtable" id="tabledelay">
+        <tr>
+          <th>Delay</th>
+          <th>Animation</th>
+        </tr>
+        <tr>
+          <td>0s</td>
+          <td><div></div></td>
+        </tr>
+        <tr>
+          <td>0.5s</td>
+          <td><div></div></td>
+        </tr>
+      </table>
+      <h3>animation-iteration-count</h3>
+      <p>
+        The animation-iteration-count property specifies the number of times an
+        animation should be played. Note that all animation on this page use the
+        <em>infinite</em> value.
+      </p>
+      <h3>animation-direction</h3>
+      <table class="animationtable" id="tabledirection">
+        <p>
+          The <em>animation-direction</em> property defines whether an animation
+          should be played forwards, backwards or in alternate cycles.
+        </p>
+        <tr>
+          <th>Timing function</th>
+          <th>Animation</th>
+        </tr>
+        <tr>
+          <td>normal</td>
+          <td><div></div></td>
+        </tr>
+        <tr>
+          <td>reverse</td>
+          <td><div></div></td>
+        </tr>
+        <tr>
+          <td>alternate</td>
+          <td><div></div></td>
+        </tr>
+        <tr>
+          <td>alternate-reverse</td>
+          <td><div></div></td>
+        </tr>
+      </table>
+    </main>
+  </body>
+</html>
