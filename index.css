@@ -14,7 +14,8 @@ code {
 header {
   color: #e0fbfc;
   background-color: #293241;
-  padding: 2rem;
+  padding-top: 2em;
+  padding-bottom: 2em;
   text-align: center;
   transition-property: background-color;
   transition-duration: 1s;
@@ -23,21 +24,53 @@ header {
 }
 
 header div {
-  width: max-content;
   margin: auto;
   overflow: hidden;
 }
 
 header h1 {
   margin: auto;
-  padding-left: 1em;
-  padding-right: 1em;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
 }
 
 header:hover {
   background-color: #3d5a80;
+}
+
+span {
+  width: 100%;
+  height: 2px;
+  left: 100%;
+  background: linear-gradient(90deg, transparent, #e0fbfc);
+  display: block;
+  position: relative;
+  animation: headeranimation 2s ease infinite;
+}
+
+span:nth-child(1) {
+  background: linear-gradient(90deg, #e0fbfc, transparent);
+  animation: headeranimation2 2s 1s ease infinite;
+}
+
+@keyframes headeranimation {
+  from {
+    left: -100%;
+  }
+  50%,
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes headeranimation2 {
+  from {
+    left: 100%;
+  }
+  50%,
+  to {
+    left: -100%;
+  }
 }
 
 main {
@@ -150,41 +183,6 @@ table {
   to {
     background-color: #3d5a80;
     color: #ee6c4d;
-  }
-}
-
-span {
-  width: 100%;
-  height: 2px;
-  left: 100%;
-  background: linear-gradient(90deg, transparent, #e0fbfc);
-  display: block;
-  position: relative;
-  animation: headeranimation 2s ease infinite;
-}
-
-span:nth-child(1) {
-  background: linear-gradient(90deg, #e0fbfc, transparent);
-  animation: headeranimation2 2s 1s ease infinite;
-}
-
-@keyframes headeranimation {
-  from {
-    left: -100%;
-  }
-  50%,
-  to {
-    left: 100%;
-  }
-}
-
-@keyframes headeranimation2 {
-  from {
-    left: 100%;
-  }
-  50%,
-  to {
-    left: -100%;
   }
 }
 
